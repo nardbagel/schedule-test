@@ -20,7 +20,8 @@ function App() {
         const endCheckVal = checkEnd.valueOf()
         return !((startVal >= startCheckVal && startVal <= endCheckVal)
           || (endVal >= startCheckVal && endVal <= endCheckVal)
-          || !(startVal < endVal))
+          || !(startVal < endVal)
+          || (startVal < new Date().valueOf()))
         })) {
       setSchedule(prev => ({ ... prev, [providerId]: [...(prev[providerId] || []), {start, end}]} ))
   }}
