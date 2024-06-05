@@ -5,7 +5,7 @@ const ConfirmAppt = ({bookings, confirmAppt}: {bookings: Record<number, Record<s
     const { patientId } = useParams()
     const patient = parseInt(patientId || "0", 10)
     const patientBookings = bookings[patient] || {}
-    console.log(patientBookings)
+
     return <>
         <div>
             {Object.entries(patientBookings).map(([time, appt]) => 
