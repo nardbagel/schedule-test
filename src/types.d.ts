@@ -1,0 +1,1 @@
+type TimeBox = {start: Date, end: Date}
